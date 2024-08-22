@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/AdaCard
+/tests/AdaCard.UnitTests/bin/Debug/net8.0
+/src/AdaCard.Api/bin/Debug/net8.0
+/src/AdaCard.Api/obj
+/src/AdaCard.Core/bin/Debug/net8.0
+/src/AdaCard.Core/obj
+/src/AdaCard.Infra/bin/Debug/net8.0
+/src/AdaCard.Infra/obj
+/tests/AdaCard.UnitTests/obj
