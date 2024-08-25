@@ -4,5 +4,5 @@ namespace AdaCard.Core.Interfaces;
 
 public interface IAuthService
 {
-    Task<Result<string>> AuthenticationAsync(string login, string senha);
+    Task<Result<string>> AuthenticationAsync(string login, string senha, CancellationToken cancellationToken);
 }

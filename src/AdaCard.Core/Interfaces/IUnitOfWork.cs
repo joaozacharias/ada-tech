@@ -2,5 +2,5 @@
 
 public interface IUnitOfWork : IAsyncDisposable
 {
-    Task SaveAsync();
+    Task SaveAsync(CancellationToken cancellationToken);
 }

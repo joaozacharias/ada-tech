@@ -9,14 +9,21 @@ public class Card : EntityBase
         string conteudo,
         string lista)
     {
-        Titulo = titulo;
-        Conteudo = conteudo;
-        Lista = lista;
+        this.Titulo = titulo;
+        this.Conteudo = conteudo;
+        this.Lista = lista;
     }
 
-    public string Titulo { get; }
+    public string Titulo { get; private set; }
 
-    public string Conteudo { get; }
+    public string Conteudo { get; private set; }
 
-    public string Lista { get; }
+    public string Lista { get; private set; }
+
+    public void UpdateCard(string titulo, string conteudo, string lista)
+    {
+        this.Titulo = titulo;
+        this.Conteudo = conteudo;
+        this.Lista = lista;
+    }
 }

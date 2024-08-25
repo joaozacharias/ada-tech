@@ -1,4 +1,4 @@
-﻿namespace AdaCard.Core.DTOs;
+﻿namespace AdaCard.Core.Features.Login.DTOs;
 
 public class AuthenticationRequest
 {

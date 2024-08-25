@@ -15,7 +15,7 @@ public class Repository<TEntity> : IRepository<TEntity>
         this.dbSet = context.Set<TEntity>();
     }
 
-    public async Task<TEntity> AddAsync(TEntity entity)
+    public async Task<TEntity> AddAsync(TEntity entity, CancellationToken cancellationToken)
     {
         var newEntity = await this.dbSet.AddAsync(entity);
         return newEntity.Entity;
@@ -26,7 +26,7 @@ public class Repository<TEntity> : IRepository<TEntity>
         this.dbSet.Remove(entity);
     }
 
-    public async Task<IEnumerable<TEntity>> FindAsync(ISpecification<TEntity> specification, bool asNoTracking, params string[] includes)
+    public async Task<IEnumerable<TEntity>> FindAsync(ISpecification<TEntity> specification, bool asNoTracking, CancellationToken cancellationToken, params string[] includes)
     {
         var query = asNoTracking
             ? dbSet.AsNoTracking().Where(specification.Criteria)
@@ -44,5 +44,15 @@ public class Repository<TEntity> : IRepository<TEntity>
         }
 
         return await query.ToArrayAsync();
+    }
+
+    public async Task<TEntity?> FindByIdAsync(int id, CancellationToken cancellationToken)
+    {
+        return await this.dbSet.FindAsync(id, cancellationToken);
+    }
+
+    public async Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken cancellationToken)
+    {
+        return await this.dbSet.AsNoTracking().ToArrayAsync();
     }
 }

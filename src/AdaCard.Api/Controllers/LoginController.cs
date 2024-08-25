@@ -1,6 +1,6 @@
 ﻿using AdaCard.Api.Contracts;
 using AdaCard.Api.Contracts.Mappers;
-using AdaCard.Core.DTOs;
+using AdaCard.Core.Features.Login.DTOs;
 using AdaCard.Core.Interfaces;
 
 using Microsoft.AspNetCore.Authorization;
@@ -24,9 +24,9 @@ public class LoginController : ControllerBase
      ProducesResponseType(typeof(string), StatusCodes.Status200OK),
      ProducesResponseType(StatusCodes.Status400BadRequest),
      ProducesResponseType(typeof(Error), StatusCodes.Status500InternalServerError)]
-    public async Task<IActionResult> Authenticate([FromBody] AuthenticationRequest auth)
+    public async Task<IActionResult> Authenticate([FromBody] AuthenticationRequest auth, CancellationToken cancellationToken)
     {
-        var authResponse = await this.authService.AuthenticationAsync(auth.Login, auth.Senha);
+        var authResponse = await this.authService.AuthenticationAsync(auth.Login, auth.Senha, cancellationToken);
 
         if (authResponse.IsFailed)
             return BadRequest(authResponse.Errors.MapToErrror());

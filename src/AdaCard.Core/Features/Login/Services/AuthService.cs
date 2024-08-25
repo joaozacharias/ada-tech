@@ -26,10 +26,10 @@ public class AuthService : IAuthService
         this.authenticationConfigurations = authenticationConfigurations;
     }
 
-    public async Task<Result<string>> AuthenticationAsync(string login, string senha)
+    public async Task<Result<string>> AuthenticationAsync(string login, string senha, CancellationToken cancellationToken)
     {
 
-        var users = await userRepository.FindAsync(new FindByLoginSpec(login), true);
+        var users = await userRepository.FindAsync(new FindByLoginSpec(login), true, cancellationToken);
 
         if (users == null || !users.Any())
         {
