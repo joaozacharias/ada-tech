@@ -46,7 +46,7 @@ public class Repository<TEntity> : IRepository<TEntity>
         return await query.ToArrayAsync();
     }
 
-    public async Task<TEntity?> FindByIdAsync(int id, CancellationToken cancellationToken)
+    public async Task<TEntity?> FindByIdAsync(object id, CancellationToken cancellationToken)
     {
         return await this.dbSet.FindAsync(id, cancellationToken);
     }

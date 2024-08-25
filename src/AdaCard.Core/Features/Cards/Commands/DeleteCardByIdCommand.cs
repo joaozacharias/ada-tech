@@ -8,10 +8,10 @@ namespace AdaCard.Core.Features.Cards.Commands;
 
 public class DeleteCardByIdCommand : IRequest<Result<IEnumerable<Card>>>
 {
-    public DeleteCardByIdCommand(int id)
+    public DeleteCardByIdCommand(Guid id)
     {
         Id = id;
     }
 
-    public int Id { get; }
+    public Guid Id { get; }
 }

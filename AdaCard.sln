@@ -7,13 +7,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D849CB25-F8B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{983AA6FC-5FA7-4125-B9FA-46225C38150F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaCard.Api", "src\AdaCard.Api\AdaCard.Api.csproj", "{0A75D596-98C0-4501-B26B-B5B31E84C8BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaCard.Api", "src\AdaCard.Api\AdaCard.Api.csproj", "{0A75D596-98C0-4501-B26B-B5B31E84C8BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaCard.Core", "src\AdaCard.Core\AdaCard.Core.csproj", "{D715ECBD-9164-4370-80BA-55893FC5746E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaCard.Core", "src\AdaCard.Core\AdaCard.Core.csproj", "{D715ECBD-9164-4370-80BA-55893FC5746E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaCard.Infra", "src\AdaCard.Infra\AdaCard.Infra.csproj", "{5EE63926-CD6E-494D-A9B3-8355C448597F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaCard.Infra", "src\AdaCard.Infra\AdaCard.Infra.csproj", "{5EE63926-CD6E-494D-A9B3-8355C448597F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaCard.UnitTests", "tests\AdaCard.UnitTests\AdaCard.UnitTests.csproj", "{6A147CCA-41FF-476A-84FC-C0F8107C6732}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaCard.UnitTests", "tests\AdaCard.UnitTests\AdaCard.UnitTests.csproj", "{6A147CCA-41FF-476A-84FC-C0F8107C6732}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaCard.IntegrationTests", "tests\AdaCard.IntegrationTests\AdaCard.IntegrationTests.csproj", "{58BFE4EE-EF87-4EC0-89BC-2EC7435C2AE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{6A147CCA-41FF-476A-84FC-C0F8107C6732}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A147CCA-41FF-476A-84FC-C0F8107C6732}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A147CCA-41FF-476A-84FC-C0F8107C6732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58BFE4EE-EF87-4EC0-89BC-2EC7435C2AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58BFE4EE-EF87-4EC0-89BC-2EC7435C2AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58BFE4EE-EF87-4EC0-89BC-2EC7435C2AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58BFE4EE-EF87-4EC0-89BC-2EC7435C2AE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{D715ECBD-9164-4370-80BA-55893FC5746E} = {D849CB25-F8B7-4857-9A65-FE636389612F}
 		{5EE63926-CD6E-494D-A9B3-8355C448597F} = {D849CB25-F8B7-4857-9A65-FE636389612F}
 		{6A147CCA-41FF-476A-84FC-C0F8107C6732} = {983AA6FC-5FA7-4125-B9FA-46225C38150F}
+		{58BFE4EE-EF87-4EC0-89BC-2EC7435C2AE2} = {983AA6FC-5FA7-4125-B9FA-46225C38150F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {19A8B54E-A5E3-49CC-B385-51344D5600B1}

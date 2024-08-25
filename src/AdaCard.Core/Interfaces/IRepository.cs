@@ -9,7 +9,7 @@ public interface IRepository<TEntity>
 
     Task<TEntity> AddAsync(TEntity entity, CancellationToken cancellationToken);
 
-    Task<TEntity?> FindByIdAsync(int id, CancellationToken cancellationToken);
+    Task<TEntity?> FindByIdAsync(object id, CancellationToken cancellationToken);
 
     void DeleteAsync(TEntity entity);
 

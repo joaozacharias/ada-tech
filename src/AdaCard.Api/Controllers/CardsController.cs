@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AdaCard.Api.Controllers;
 
-[Route("api/[controller]")]
+[Route("[controller]")]
 [ApiController]
 [Authorize]
 public class CardsController : ControllerBase
@@ -55,7 +55,7 @@ public class CardsController : ControllerBase
         ProducesResponseType(StatusCodes.Status404NotFound),
         ProducesResponseType(StatusCodes.Status401Unauthorized),
         ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public async Task<IActionResult> PutAsync([FromRoute] int id, [FromBody] CreateCard updatedCardRequest, CancellationToken cancellationToken)
+    public async Task<IActionResult> PutAsync([FromRoute] Guid id, [FromBody] CreateCard updatedCardRequest, CancellationToken cancellationToken)
     {
         var command = new UpdateCardCommand(id, updatedCardRequest);
 
@@ -74,7 +74,7 @@ public class CardsController : ControllerBase
         ProducesResponseType(StatusCodes.Status404NotFound),
         ProducesResponseType(StatusCodes.Status401Unauthorized),
         ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public async Task<IActionResult> DeleteAsync([FromRoute] int id, CancellationToken cancellationToken)
+    public async Task<IActionResult> DeleteAsync([FromRoute] Guid id, CancellationToken cancellationToken)
     {
         var command = new DeleteCardByIdCommand(id);
 
